@@ -1,0 +1,42 @@
+def adicionar_tarefa(tarefas, tarefa):
+    tarefas.append(tarefa)
+    print("Tarefa adicionada com sucesso!")
+
+def remover_tarefa(tarefas, indice):
+    if 0 <= indice < len(tarefas):
+        tarefa_removida = tarefas.pop(indice)
+        print(f"Tarefa '{tarefa_removida}' removida com sucesso!")
+    else:
+        print("Índice inválido!")
+
+def exibir_tarefas(tarefas):
+    print("Lista de Tarefas:")
+    for i, tarefa in enumerate(tarefas):
+        print(f"{i+1}. {tarefa}")
+
+def main():
+    tarefas = []
+    while True:
+        print("\n=== Lista de Tarefas ===")
+        print("1. Adicionar Tarefa")
+        print("2. Remover Tarefa")
+        print("3. Exibir Tarefas")
+        print("4. Sair")
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            tarefa = input("Digite a tarefa a ser adicionada: ")
+            adicionar_tarefa(tarefas, tarefa)
+        elif opcao == "2":
+            indice = int(input("Digite o índice da tarefa a ser removida: ")) - 1
+            remover_tarefa(tarefas, indice)
+        elif opcao == "3":
+            exibir_tarefas(tarefas)
+        elif opcao == "4":
+            print("Saindo...")
+            break
+        else:
+            print("Opção inválida! Tente novamente.")
+
+if __name__ == "__main__":
+    main()
