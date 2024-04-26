@@ -1,0 +1,55 @@
+def celsius_para_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def celsius_para_kelvin(celsius):
+    return celsius + 273.15
+
+def fahrenheit_para_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5/9
+
+def fahrenheit_para_kelvin(fahrenheit):
+    return (fahrenheit - 32) * 5/9 + 273.15
+
+def kelvin_para_celsius(kelvin):
+    return kelvin - 273.15
+
+def kelvin_para_fahrenheit(kelvin):
+    return (kelvin - 273.15) * 9/5 + 32
+
+def main():
+    print("Conversor de Temperatura")
+    print("Escolha a opção de conversão:")
+    print("1. Celsius para Fahrenheit")
+    print("2. Celsius para Kelvin")
+    print("3. Fahrenheit para Celsius")
+    print("4. Fahrenheit para Kelvin")
+    print("5. Kelvin para Celsius")
+    print("6. Kelvin para Fahrenheit")
+    opcao = input("Digite o número da opção desejada: ")
+
+    if opcao == "1":
+        celsius = float(input("Digite a temperatura em Celsius: "))
+        resultado = celsius_para_fahrenheit(celsius)
+        print("Resultado:", resultado, "F")
+    elif opcao == "2":
+        celsius = float(input("Digite a temperatura em Celsius: "))
+        resultado = celsius_para_kelvin(celsius)
+        print("Resultado:", resultado, "K")
+    elif opcao == "3":
+        fahrenheit = float(input("Digite a temperatura em Fahrenheit: "))
+        resultado = fahrenheit_para_celsius(fahrenheit)
+        print("Resultado:", resultado, "°C")
+    elif opcao == "4":
+        fahrenheit = float(input("Digite a temperatura em Fahrenheit: "))
+        resultado = fahrenheit_para_kelvin(fahrenheit)
+        print("Resultado:", resultado, "K")
+    elif opcao == "5":
+        kelvin = float(input("Digite a temperatura em Kelvin: "))
+        resultado = kelvin_para_celsius(kelvin)
+        print("Resultado:", resultado, "°C")
+    elif opcao == "6":
+        kelvin = float(input("Digite a temperatura em Kelvin: "))
+        resultado = kelvin_para_fahrenheit(kelvin)
+        print("Resultado:", resultado, "F")
+    else:
+        print("Opção inválida. Por favor, escolha uma
